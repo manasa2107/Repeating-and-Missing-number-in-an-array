@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int n,m,x,s,i,d=0;
+    cin>>n;
+    int a[n];
+    for(i=0;i<n;i++)
+    cin>>a[i];
+    sort(a,a+n);
+    for(i=0;i<n;i++) {
+        //d=d^a[i]^i; //XOR APPROACH
+    if(a[i]==a[i+1]) {
+    m=i;
+    cout<<"repating ele="<<a[i]<<endl;
+    }
+    }
+    //cout<<"repeating ele"<<d; //XOR RESULT
+     x=(n*(n+1))/2;
+    for(i=0;i<n;i++)
+    {
+        a[m]=0;
+      s+=a[i];
+    }
+    cout<<"missing ele="<<x-s<<endl;
+    	return 0;
+}
